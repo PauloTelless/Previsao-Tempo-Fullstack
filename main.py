@@ -17,7 +17,7 @@ def get_previsao():
     cidade = request.form.get('cidade')
     cidade_formatada = formatar_nome_cidade(cidade)
     
-    API_Key = 'e1d46f324e963f3d1654a81751c807cf'
+    API_Key = ''
     link = f'https://api.openweathermap.org/data/2.5/weather?q={cidade_formatada}&appid={API_Key}&lang=pt_br'
     
     try:
