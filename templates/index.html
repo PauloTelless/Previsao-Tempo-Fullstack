@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/ico/faveicon.ico') }}" type="image/x-icon">
+    <title>Previsão</title>
+</head>
+<body>
+    <div class="form-box">
+        <form action="http://127.0.0.1:5000/previsao" method="POST">
+            <div class="input-group">
+                <img src="/static/foto-clima-index.png">
+                <h1>Previsão</h1>
+                <label>Digite o nome da cidade</label>
+                <input type="text" name="cidade" id="cidade" required placeholder="Nome da cidade" autocomplete="off">
+                <button>Verificar</button>
+         </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='previsao.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='/ico/faveicon.ico') }}" type="image/x-icon">
+    <title>Clima</title>
+</head>
+<body>
+    <div class="main-info">
+        {% if ceu == 'Nublado' %}
+            <img src="/static/foto-clima-nublado.png">
+        {% elif 'nuvens' in ceu %}
+            <img src="/static/foto-clima-nuves.png">
+        {% elif 'Chuva' in ceu %}
+            <img src="/static/foto-clima-chuva.png" >
+        {% elif 'Névoa' in ceu %}
+            <img src="/static/foto-clima-nevoa.png">
+        {% elif 'Nuvens' in ceu %}
+            <img src="/static/foto-clima-nuves.png">
+        {% else %}
+            <img src="/static/foto-sol.png">
+        {% endif %}
+
+        <div class="parte-superior">
+            {% if cidade|length > 8 and cidade|length <= 13 %}
+                <span style="font-size: 45px;">{{ cidade }}</span>
+            {% elif cidade|length >= 13 %}
+                <span style="font-size: 45px;">{{ cidade }}</span>
+            {% elif cidade|length > 14 %}
+                <span style="font-size: 43px;">{{ cidade }}</span>
+            {% else %}
+                <span>{{ cidade }}</span>
+            {% endif %}
+            <div class="temperatura-session">
+                {{temperatura}}C°
+            </div>
+        </div>
+        <div class="parte-inferior">
+            <div class="info-session">
+                <img src="/static/foto-vento.png">
+                <span>Vento</span>
+                {{velocidade_vento}}km/h
+            </div>
+            <div class="info-session">
+                <img src="/static/foto-umidade.png">
+                <span>Umidade</span>
+                {{umidade}}%
+            </div>
+            <div class="info-session">
+                <img src="/static/foto-clima.png">
+                <span>Clima</span>
+                {{ceu}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(141, 182, 209);
+}
+
+body .main-info {
+    border-color: white;
+    border-style: solid;
+    flex-direction: column;
+    color: white;
+    width: 80%;
+    max-width: 500px; 
+    height: 70%;
+    border-radius: 20px;
+    font-size: 18px; 
+    padding: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .main-info .parte-superior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px; 
+    font-weight: bolder;
+}
+
+body .main-info .parte-superior .temperatura-session img {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+body .main-info .parte-inferior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; 
+}
+
+body .main-info .parte-inferior .info-session {
+    padding: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px; 
+    margin: 0 10px; 
+}
+
+body .main-info .parte-inferior .info-session span {
+    font-weight: bold;
+}
